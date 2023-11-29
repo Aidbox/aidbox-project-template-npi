@@ -1,7 +1,9 @@
 {ns     config
  import #{aidbox
           aidbox.config
-          hl7-fhir-r4-core}
+          hl7-fhir-r4-core
+          awf.scheduler
+          box.npi}
 
  db-config
  {:zen/tags #{aidbox.config/db}
@@ -74,6 +76,8 @@
    :AccessPolicy {:allow-admin-user
                   {:engine "allow"
                    :link   [{:resourceType "User" :id "admin"}]}}}}
+
+
  root-client-seed
  {:zen/tags #{aidbox/service}
   :engine   aidbox/seed-v2
@@ -86,4 +90,18 @@
 
    :AccessPolicy {:allow-root-client
                   {:engine "allow"
-                   :link   [{:resourceType "Client" :id "root"}]}}}}}
+                   :link   [{:resourceType "Client" :id "root"}]}}}}
+
+ npi-import-rule
+ {:zen/tags #{awf.scheduler/rule}
+  :schedule "0 7 * * *"
+  :concurrency-policy "forbid"
+  :execute-on-setup true
+  :task-request {:definition box.npi/sync-npi
+                 :params     {}}}
+
+ scheduler-service
+ {:zen/tags #{aidbox/service}
+  :engine awf.scheduler/task-scheduler-service-engine
+  :rules #{npi-import-rule}}
+ }
