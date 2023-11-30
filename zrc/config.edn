@@ -43,7 +43,7 @@
   :validation {:json-schema {:regex #{:fhir-datetime}}}
   :auth       {:pkce {:code-challenge {:s256 {:conformant true}}}}}
 
- auth
+ 
  {:zen/tags       #{aidbox.config/auth}
   :login-redirect "/ui/console"
   :keys {:secret #env BOX_AUTH_KEYS_SECRET
@@ -67,32 +67,6 @@
   :dev-mode                #env-boolean AIDBOX_DEV_MODE
   :stdout-pretty           true
   :disable-legacy-seed     true}
-
- admin-user-seed
- {:zen/tags #{aidbox/service}
-  :engine   aidbox/seed-v2
-  :resources
-  {:User {:admin
-          {:password #env AIDBOX_ADMIN_PASSWORD}}
-
-   :AccessPolicy {:allow-admin-user
-                  {:engine "allow"
-                   :link   [{:resourceType "User" :id "admin"}]}}}}
-
-
- root-client-seed
- {:zen/tags #{aidbox/service}
-  :engine   aidbox/seed-v2
-  :resources
-  {:Client {:root
-            {:name        "Root client"
-             :secret      #env AIDBOX_CLIENT_SECRET
-             :first_party true
-             :grant_types ["basic"]}}
-
-   :AccessPolicy {:allow-root-client
-                  {:engine "allow"
-                   :link   [{:resourceType "Client" :id "root"}]}}}}
 
  npi-import-rule
  {:zen/tags #{awf.scheduler/rule}
@@ -145,5 +119,4 @@
  {:zen/tags #{aidbox/service}
   :engine aidbox.repository.v1/engine
   :load-default true
-  :repositories #{practitioner-repository}}
- }
+  :repositories #{practitioner-repository}}}
