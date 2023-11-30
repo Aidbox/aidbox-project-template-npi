@@ -120,12 +120,24 @@
  {:zen/tags #{aidbox.index.v1/index}
   :table "practitioner"
   :type :gin
-  :expression "aidbox_text_search(knife_extract_text(resource, '[[\"name\", \"family\"], [\"name\", \"given\"], [\"name\", \"middle\"], [\"name\", \"text\"]]'::jsonb)) gin_trgm_ops"}
+  :expression "CAST(jsonb_path_query_array(\"practitioner\".resource, '($.\"name\"[*]).** ? (@.type() == \"string\")'::jsonpath) AS \"text\") gin_trgm_ops"}
+ 
+ practitioner-name-given-gin-index
+ {:zen/tags #{aidbox.index.v1/index}
+  :table "practitioner"
+  :type :gin
+  :expression "CAST(jsonb_path_query_array(\"practitioner\".resource, '($.\"name\".\"given\"[*]).** ? (@.type() == \"string\")'::jsonpath) AS \"text\") gin_trgm_ops"}
+
+ practitioner-name-family-gin-index
+ {:zen/tags #{aidbox.index.v1/index}
+  :table "practitioner"
+  :type :gin
+  :expression "CAST(jsonb_path_query_array(\"practitioner\".resource, '($.\"name\".\"family\"[*]).** ? (@.type() == \"string\")'::jsonpath) AS \"text\") gin_trgm_ops"}
 
  practitioner-repository
  {:zen/tags #{aidbox.repository.v1/repository}
   :resourceType "Practitioner"
-  :indexes #{practitioner-name-gin-index}
+  :indexes #{practitioner-name-gin-index practitioner-name-given-gin-index practitioner-name-family-gin-index}
   :extra-parameter-sources :all
   :search-parameters #{}}
 
