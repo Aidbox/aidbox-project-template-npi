@@ -4,7 +4,8 @@
           hl7-fhir-r4-core
           awf.scheduler
           box.npi
-          aidbox.index.v1}
+          aidbox.index.v1
+          aidbox.index}
 
  db-config
  {:zen/tags #{aidbox.config/db}
@@ -101,10 +102,19 @@
   :task-request {:definition box.npi/sync-npi
                  :params     {}}}
 
+ create-indexes-rule
+ {:zen/tags #{awf.scheduler/rule}
+  :schedule "1 1 1 6 1"
+  :concurrency-policy "forbid"
+  :execute-on-setup true
+  :task-request {:definition aidbox.task/run-rpc
+                 :params {:method "aidbox.index.v1/sync-indexes"
+                          :params {}}}}
+
  scheduler-service
  {:zen/tags #{aidbox/service}
   :engine awf.scheduler/task-scheduler-service-engine
-  :rules #{npi-import-rule}}
+  :rules #{npi-import-rule create-indexes-rule}}
 
  practitioner-name-gin-index
  {:zen/tags #{aidbox.index.v1/index}
