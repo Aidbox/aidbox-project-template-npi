@@ -5,6 +5,7 @@
  box
  {:zen/tags #{aidbox/system}
   :config   config/base-config
-  :services {:admin-user-seed config/admin-user-seed
+  :services {:repositories config/repositories
+             :admin-user-seed config/admin-user-seed
              :scheduler-service config/scheduler-service
              :root-client-seed config/root-client-seed}}}

@@ -3,7 +3,8 @@
           aidbox.config
           hl7-fhir-r4-core
           awf.scheduler
-          box.npi}
+          box.npi
+          aidbox.index.v1}
 
  db-config
  {:zen/tags #{aidbox.config/db}
@@ -104,4 +105,23 @@
  {:zen/tags #{aidbox/service}
   :engine awf.scheduler/task-scheduler-service-engine
   :rules #{npi-import-rule}}
+
+ practitioner-name-gin-index
+ {:zen/tags #{aidbox.index.v1/index}
+  :table "practitioner"
+  :type :gin
+  :expression "aidbox_text_search(knife_extract_text(resource, '[[\"name\", \"family\"], [\"name\", \"given\"], [\"name\", \"middle\"], [\"name\", \"text\"]]'::jsonb)) gin_trgm_ops"}
+
+ practitioner-repository
+ {:zen/tags #{aidbox.repository.v1/repository}
+  :resourceType "Practitioner"
+  :indexes #{practitioner-name-gin-index}
+  :extra-parameter-sources :all
+  :search-parameters #{}}
+
+ repositories
+ {:zen/tags #{aidbox/service}
+  :engine aidbox.repository.v1/engine
+  :load-default true
+  :repositories #{practitioner-repository}}
  }
