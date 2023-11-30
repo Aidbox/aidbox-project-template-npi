@@ -1,7 +1,6 @@
 {ns     config
  import #{aidbox
           aidbox.config
-          hl7-fhir-r4-core
           awf.scheduler
           box.npi
           aidbox.index.v1
