@@ -6,4 +6,6 @@
  {:zen/tags #{aidbox/system}
   :config   config/base-config
   :services {:repositories config/repositories
-             :scheduler-service config/scheduler-service}}}
+             :admin-user-seed config/admin-user-seed
+             :scheduler-service config/scheduler-service
+             :root-client-seed config/root-client-seed}}}
