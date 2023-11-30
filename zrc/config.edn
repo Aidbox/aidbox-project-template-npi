@@ -71,12 +71,8 @@
  {:zen/tags #{aidbox/service}
   :engine   aidbox/seed-v2
   :resources
-  {:User {:admin
-          {:password #env AIDBOX_ADMIN_PASSWORD}}
-
-   :AccessPolicy {:allow-admin-user
-                  {:engine "allow"
-                   :link   [{:resourceType "User" :id "admin"}]}}}}
+  {:User {:admin {:password #env AIDBOX_ADMIN_PASSWORD}}
+   :AccessPolicy {:allow-admin-user {:engine "allow" :link   [{:resourceType "User" :id "admin"}]}}}}
 
 
  root-client-seed
