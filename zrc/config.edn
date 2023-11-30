@@ -42,7 +42,7 @@
   :validation {:json-schema {:regex #{:fhir-datetime}}}
   :auth       {:pkce {:code-challenge {:s256 {:conformant true}}}}}
 
- 
+ auth
  {:zen/tags       #{aidbox.config/auth}
   :login-redirect "/ui/console"
   :keys {:secret #env BOX_AUTH_KEYS_SECRET
