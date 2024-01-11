@@ -147,9 +147,1024 @@
   :extra-parameter-sources :all
   :search-parameters #{}}
 
+ has-tradename-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                           :for has-tradename-code},
+ tradename-of-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                          :for tradename-of-code},
+ includes-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                         :for includes-display},
+ inverse-isa-code {:expression [["property" "inverse_isa" "code"]],
+                   :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                   :name "inverseIsaCode",
+                   :type :token,
+                   :resource {:resourceType "Entity", :id "Concept"}},
+ has-dose-form-code {:expression [["property" "has_dose_form" "code"]],
+                     :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                     :name "hasDoseFormCode",
+                     :type :token,
+                     :resource {:resourceType "Entity", :id "Concept"}},
+ doseformgroup-of-code {:expression [["property" "doseformgroup_of" "code"]],
+                        :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                        :name "doseformgroupOfCode",
+                        :type :token,
+                        :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-boss-strength-num-unit-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                   :for rxn-boss-strength-num-unit},
+ rxn-bn-cardinality {:expression [["property" "rxn_bn_cardinality"]],
+                     :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                     :name "rxnBnCardinality",
+                     :type :string,
+                     :resource {:resourceType "Entity", :id "Concept"}},
+ contained-in-display {:expression [["property" "contained_in" "display"]],
+                       :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                       :name "containedInDisplay",
+                       :type :string,
+                       :resource {:resourceType "Entity", :id "Concept"}},
+ dose-form-of-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                             :for dose-form-of-display},
+ form-of-code {:expression [["property" "form_of" "code"]],
+               :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+               :name "formOfCode",
+               :type :token,
+               :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-activated {:expression [["property" "rxn_activated"]],
+                :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                :name "rxnActivated",
+                :type :string,
+                :resource {:resourceType "Entity", :id "Concept"}},
+ has-doseformgroup-code {:expression [["property" "has_doseformgroup" "code"]],
+                         :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                         :name "hasDoseformgroupCode",
+                         :type :token,
+                         :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-qualitative-distinction-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                    :for rxn-qualitative-distinction},
+ constitutes-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                         :for constitutes-code},
+ has-dose-form-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                           :for has-dose-form-code},
+ inverse-isa-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                            :for inverse-isa-display},
+ tradename-of-code {:expression [["property" "tradename_of" "code"]],
+                    :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                    :name "tradenameOfCode",
+                    :type :token,
+                    :resource {:resourceType "Entity", :id "Concept"}},
+ boss-of-display {:expression [["property" "boss_of" "display"]],
+                  :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                  :name "bossOfDisplay",
+                  :type :string,
+                  :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-obsoleted {:expression [["property" "rxn_obsoleted"]],
+                :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                :name "rxnObsoleted",
+                :type :string,
+                :resource {:resourceType "Entity", :id "Concept"}},
+ has-dose-form-display {:expression [["property" "has_dose_form" "display"]],
+                        :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                        :name "hasDoseFormDisplay",
+                        :type :string,
+                        :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-boss-from {:expression [["property" "rxn_boss_from"]],
+                :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                :name "rxnBossFrom",
+                :type :string,
+                :resource {:resourceType "Entity", :id "Concept"}},
+ ingredients-of-display {:expression [["property" "ingredients_of" "display"]],
+                         :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                         :name "ingredientsOfDisplay",
+                         :type :string,
+                         :resource {:resourceType "Entity", :id "Concept"}},
+ contains-display {:expression [["property" "contains" "display"]],
+                   :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                   :name "containsDisplay",
+                   :type :string,
+                   :resource {:resourceType "Entity", :id "Concept"}},
+ has-quantified-form-code {:expression [["property"
+                                         "has_quantified_form"
+                                         "code"]],
+                           :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                           :name "hasQuantifiedFormCode",
+                           :type :token,
+                           :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-human-drug-index {:zen/tags #{aidbox.index.v1/auto-index},
+                       :for rxn-human-drug},
+ has-ingredient-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                            :for has-ingredient-code},
+ has-ingredients-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                             :for has-ingredients-code},
+ has-doseformgroup-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                               :for has-doseformgroup-code},
+ has-precise-ingredient-display {:expression [["property"
+                                               "has_precise_ingredient"
+                                               "display"]],
+                                 :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                                 :name "hasPreciseIngredientDisplay",
+                                 :type :string,
+                                 :resource {:resourceType "Entity",
+                                            :id "Concept"}},
+ ambiguity-flag-index {:zen/tags #{aidbox.index.v1/auto-index},
+                       :for ambiguity-flag},
+ included-in-code {:expression [["property" "included_in" "code"]],
+                   :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                   :name "includedInCode",
+                   :type :token,
+                   :resource {:resourceType "Entity", :id "Concept"}},
+ quantified-form-of-code {:expression [["property" "quantified_form_of" "code"]],
+                          :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                          :name "quantifiedFormOfCode",
+                          :type :token,
+                          :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-qualitative-distinction {:expression [["property"
+                                            "rxn_qualitative_distinction"]],
+                              :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                              :name "rxnQualitativeDistinction",
+                              :type :string,
+                              :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-available-strength-index {:zen/tags #{aidbox.index.v1/auto-index},
+                               :for rxn-available-strength},
+ isa-display-index {:zen/tags #{aidbox.index.v1/auto-index}, :for isa-display},
+ part-of-code-index {:zen/tags #{aidbox.index.v1/auto-index}, :for part-of-code},
+ dose-form-of-display {:expression [["property" "dose_form_of" "display"]],
+                       :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                       :name "doseFormOfDisplay",
+                       :type :string,
+                       :resource {:resourceType "Entity", :id "Concept"}},
+ has-ingredient-display {:expression [["property" "has_ingredient" "display"]],
+                         :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                         :name "hasIngredientDisplay",
+                         :type :string,
+                         :resource {:resourceType "Entity", :id "Concept"}},
+ dose-form-of-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                          :for dose-form-of-code},
+ rxn-in-expressed-flag {:expression [["property" "rxn_in_expressed_flag"]],
+                        :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                        :name "rxnInExpressedFlag",
+                        :type :string,
+                        :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-boss-strength-num-value-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                    :for rxn-boss-strength-num-value},
+ has-form-display {:expression [["property" "has_form" "display"]],
+                   :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                   :name "hasFormDisplay",
+                   :type :string,
+                   :resource {:resourceType "Entity", :id "Concept"}},
+ boss-of-code {:expression [["property" "boss_of" "code"]],
+               :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+               :name "bossOfCode",
+               :type :token,
+               :resource {:resourceType "Entity", :id "Concept"}},
+ reformulation-of-display {:expression [["property"
+                                         "reformulation_of"
+                                         "display"]],
+                           :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                           :name "reformulationOfDisplay",
+                           :type :string,
+                           :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-bn-cardinality-index {:zen/tags #{aidbox.index.v1/auto-index},
+                           :for rxn-bn-cardinality},
+ rxn-strength-index {:zen/tags #{aidbox.index.v1/auto-index}, :for rxn-strength},
+ has-form-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                      :for has-form-code},
+ has-ingredient-code {:expression [["property" "has_ingredient" "code"]],
+                      :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                      :name "hasIngredientCode",
+                      :type :token,
+                      :resource {:resourceType "Entity", :id "Concept"}},
+ ingredient-of-code {:expression [["property" "ingredient_of" "code"]],
+                     :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                     :name "ingredientOfCode",
+                     :type :token,
+                     :resource {:resourceType "Entity", :id "Concept"}},
+ constitutes-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                            :for constitutes-display},
+ has-quantified-form-display {:expression [["property"
+                                            "has_quantified_form"
+                                            "display"]],
+                              :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                              :name "hasQuantifiedFormDisplay",
+                              :type :string,
+                              :resource {:resourceType "Entity", :id "Concept"}},
+ has-precise-ingredient-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                       :for has-precise-ingredient-display},
+ has-boss-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                         :for has-boss-display},
+ rxterm-form {:expression [["property" "rxterm_form"]],
+              :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+              :name "rxtermForm",
+              :type :string,
+              :resource {:resourceType "Entity", :id "Concept"}},
+ has-part-code {:expression [["property" "has_part" "code"]],
+                :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                :name "hasPartCode",
+                :type :token,
+                :resource {:resourceType "Entity", :id "Concept"}},
+ quantified-form-of-display {:expression [["property"
+                                           "quantified_form_of"
+                                           "display"]],
+                             :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                             :name "quantifiedFormOfDisplay",
+                             :type :string,
+                             :resource {:resourceType "Entity", :id "Concept"}},
+ doseformgroup-of-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                              :for doseformgroup-of-code},
+ quantified-form-of-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                   :for quantified-form-of-display},
+ ingredient-of-display {:expression [["property" "ingredient_of" "display"]],
+                        :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                        :name "ingredientOfDisplay",
+                        :type :string,
+                        :resource {:resourceType "Entity", :id "Concept"}},
+ ambiguity-flag {:expression [["property" "ambiguity_flag"]],
+                 :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                 :name "ambiguityFlag",
+                 :type :string,
+                 :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-activated-index {:zen/tags #{aidbox.index.v1/auto-index},
+                      :for rxn-activated},
+ has-boss-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                      :for has-boss-code},
+ inverse-isa-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                         :for inverse-isa-code},
+ reformulated-to-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                             :for reformulated-to-code},
+ dose-form-of-code {:expression [["property" "dose_form_of" "code"]],
+                    :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                    :name "doseFormOfCode",
+                    :type :token,
+                    :resource {:resourceType "Entity", :id "Concept"}},
+ ingredient-of-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                              :for ingredient-of-display},
+ has-quantified-form-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                 :for has-quantified-form-code},
+ included-in-display {:expression [["property" "included_in" "display"]],
+                      :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                      :name "includedInDisplay",
+                      :type :string,
+                      :resource {:resourceType "Entity", :id "Concept"}},
+ has-ingredient-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                               :for has-ingredient-display},
+ rxn-quantity-index {:zen/tags #{aidbox.index.v1/auto-index}, :for rxn-quantity},
+ rxn-boss-strength-denom-value-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                      :for rxn-boss-strength-denom-value},
+ rxn-boss-strength-denom-value {:expression [["property"
+                                              "rxn_boss_strength_denom_value"]],
+                                :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                                :name "rxnBossStrengthDenomValue",
+                                :type :string,
+                                :resource {:resourceType "Entity",
+                                           :id "Concept"}},
+ rxn-am {:expression [["property" "rxn_am"]],
+         :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+         :name "rxnAm",
+         :type :string,
+         :resource {:resourceType "Entity", :id "Concept"}},
+ has-precise-ingredient-code {:expression [["property"
+                                            "has_precise_ingredient"
+                                            "code"]],
+                              :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                              :name "hasPreciseIngredientCode",
+                              :type :token,
+                              :resource {:resourceType "Entity", :id "Concept"}},
+ has-form-code {:expression [["property" "has_form" "code"]],
+                :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                :name "hasFormCode",
+                :type :token,
+                :resource {:resourceType "Entity", :id "Concept"}},
+ concept-repository {:extra-parameter-sources :all,
+                     :zen/tags #{aidbox.repository.v1/repository},
+                     :search-parameters #{tty
+                                          inverse-isa-code
+                                          has-dose-form-code
+                                          doseformgroup-of-code
+                                          rxn-bn-cardinality
+                                          contained-in-display
+                                          form-of-code
+                                          rxn-activated
+                                          has-doseformgroup-code
+                                          tradename-of-code
+                                          boss-of-display
+                                          rxn-obsoleted
+                                          has-dose-form-display
+                                          rxn-boss-from
+                                          ingredients-of-display
+                                          contains-display
+                                          has-quantified-form-code
+                                          has-precise-ingredient-display
+                                          included-in-code
+                                          quantified-form-of-code
+                                          rxn-qualitative-distinction
+                                          dose-form-of-display
+                                          has-ingredient-display
+                                          rxn-in-expressed-flag
+                                          has-form-display
+                                          boss-of-code
+                                          reformulation-of-display
+                                          has-ingredient-code
+                                          ingredient-of-code
+                                          has-quantified-form-display
+                                          rxterm-form
+                                          has-part-code
+                                          quantified-form-of-display
+                                          ingredient-of-display
+                                          ambiguity-flag
+                                          dose-form-of-code
+                                          included-in-display
+                                          rxn-boss-strength-denom-value
+                                          rxn-am
+                                          has-precise-ingredient-code
+                                          has-form-code
+                                          inverse-isa-display
+                                          includes-display
+                                          rxn-boss-strength-num-unit
+                                          has-ingredients-code
+                                          has-tradename-display
+                                          rxn-boss-strength-denom-unit
+                                          rxn-ai
+                                          rxn-quantity
+                                          part-of-display
+                                          has-boss-code
+                                          constitutes-code
+                                          isa-display
+                                          rxn-human-drug
+                                          has-tradename-code
+                                          reformulated-to-display
+                                          rxn-boss-strength-num-value
+                                          rxn-vet-drug
+                                          contains-code
+                                          rxn-available-strength
+                                          tradename-of-display
+                                          has-ingredients-display
+                                          consists-of-code
+                                          part-of-code
+                                          has-doseformgroup-display
+                                          includes-code
+                                          reformulation-of-code
+                                          reformulated-to-code
+                                          consists-of-display
+                                          doseformgroup-of-display
+                                          constitutes-display
+                                          precise-ingredient-of-code
+                                          precise-ingredient-of-display
+                                          form-of-display
+                                          ingredients-of-code
+                                          orig-source
+                                          has-part-display
+                                          isa-code
+                                          contained-in-code
+                                          orig-code
+                                          has-boss-display
+                                          rxn-strength},
+                     :resourceType "Concept",
+                     :base-profile Concept,
+                     :indexes #{tty-index
+                                has-tradename-code-index
+                                tradename-of-code-index
+                                includes-display-index
+                                rxn-boss-strength-num-unit-index
+                                dose-form-of-display-index
+                                rxn-qualitative-distinction-index
+                                constitutes-code-index
+                                has-dose-form-code-index
+                                inverse-isa-display-index
+                                rxn-human-drug-index
+                                has-ingredient-code-index
+                                has-ingredients-code-index
+                                has-doseformgroup-code-index
+                                ambiguity-flag-index
+                                rxn-available-strength-index
+                                isa-display-index
+                                part-of-code-index
+                                dose-form-of-code-index
+                                rxn-boss-strength-num-value-index
+                                rxn-bn-cardinality-index
+                                rxn-strength-index
+                                has-form-code-index
+                                constitutes-display-index
+                                has-precise-ingredient-display-index
+                                has-boss-display-index
+                                doseformgroup-of-code-index
+                                quantified-form-of-display-index
+                                rxn-activated-index
+                                has-boss-code-index
+                                inverse-isa-code-index
+                                reformulated-to-code-index
+                                ingredient-of-display-index
+                                has-quantified-form-code-index
+                                has-ingredient-display-index
+                                rxn-quantity-index
+                                rxn-boss-strength-denom-value-index
+                                orig-source-index
+                                rxn-in-expressed-flag-index
+                                included-in-code-index
+                                has-part-display-index
+                                rxn-boss-from-index
+                                tradename-of-display-index
+                                rxn-vet-drug-index
+                                rxterm-form-index
+                                form-of-code-index
+                                reformulation-of-code-index
+                                contains-code-index
+                                ingredient-of-code-index
+                                ingredients-of-code-index
+                                rxn-ai-index
+                                includes-code-index
+                                has-doseformgroup-display-index
+                                boss-of-display-index
+                                reformulated-to-display-index
+                                rxn-boss-strength-denom-unit-index
+                                precise-ingredient-of-code-index
+                                doseformgroup-of-display-index
+                                form-of-display-index
+                                boss-of-code-index
+                                has-tradename-display-index
+                                reformulation-of-display-index
+                                has-quantified-form-display-index
+                                rxn-obsoleted-index
+                                has-ingredients-display-index
+                                isa-code-index
+                                consists-of-code-index
+                                contains-display-index
+                                precise-ingredient-of-display-index
+                                contained-in-display-index
+                                consists-of-display-index
+                                contained-in-code-index
+                                part-of-display-index
+                                ingredients-of-display-index
+                                has-part-code-index
+                                has-form-display-index
+                                has-dose-form-display-index
+                                rxn-am-index
+                                included-in-display-index
+                                quantified-form-of-code-index
+                                has-precise-ingredient-code-index
+                                orig-code-index}},
+ orig-source-index {:zen/tags #{aidbox.index.v1/auto-index}, :for orig-source},
+ rxn-in-expressed-flag-index {:zen/tags #{aidbox.index.v1/auto-index},
+                              :for rxn-in-expressed-flag},
+ included-in-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                         :for included-in-code},
+ inverse-isa-display {:expression [["property" "inverse_isa" "display"]],
+                      :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                      :name "inverseIsaDisplay",
+                      :type :string,
+                      :resource {:resourceType "Entity", :id "Concept"}},
+ has-part-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                         :for has-part-display},
+ includes-display {:expression [["property" "includes" "display"]],
+                   :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                   :name "includesDisplay",
+                   :type :string,
+                   :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-boss-strength-num-unit {:expression [["property"
+                                           "rxn_boss_strength_num_unit"]],
+                             :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                             :name "rxnBossStrengthNumUnit",
+                             :type :string,
+                             :resource {:resourceType "Entity", :id "Concept"}},
+ has-ingredients-code {:expression [["property" "has_ingredients" "code"]],
+                       :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                       :name "hasIngredientsCode",
+                       :type :token,
+                       :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-boss-from-index {:zen/tags #{aidbox.index.v1/auto-index},
+                      :for rxn-boss-from},
+ has-tradename-display {:expression [["property" "has_tradename" "display"]],
+                        :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                        :name "hasTradenameDisplay",
+                        :type :string,
+                        :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-boss-strength-denom-unit {:expression [["property"
+                                             "rxn_boss_strength_denom_unit"]],
+                               :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                               :name "rxnBossStrengthDenomUnit",
+                               :type :string,
+                               :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-ai {:expression [["property" "rxn_ai"]],
+         :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+         :name "rxnAi",
+         :type :string,
+         :resource {:resourceType "Entity", :id "Concept"}},
+ tradename-of-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                             :for tradename-of-display},
+ rxn-quantity {:expression [["property" "rxn_quantity"]],
+               :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+               :name "rxnQuantity",
+               :type :string,
+               :resource {:resourceType "Entity", :id "Concept"}},
+ part-of-display {:expression [["property" "part_of" "display"]],
+                  :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                  :name "partOfDisplay",
+                  :type :string,
+                  :resource {:resourceType "Entity", :id "Concept"}},
+ has-boss-code {:expression [["property" "has_boss" "code"]],
+                :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                :name "hasBossCode",
+                :type :token,
+                :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-vet-drug-index {:zen/tags #{aidbox.index.v1/auto-index}, :for rxn-vet-drug},
+ Concept {:zen.fhir/version "0.5.11",
+          :confirms #{zen.fhir/Resource},
+          :zen/tags #{zen/schema zen.fhir/base-schema},
+          :require #{:system :code},
+          :type zen/map,
+          :keys {:definition {:type zen/string, :zen.fhir/type "string"},
+                 :system {:type zen/string, :zen.fhir/type "string"},
+                 :property {:type zen/map,
+                            :keys {:tty {:type zen/string,
+                                         :zen.fhir/type "string"}
+                                   :rxn_qualitative_distinction {:type zen/string,
+                                                                 :zen.fhir/type "string"},
+                                   :has_boss {:type zen/vector,
+                                              :every {:type zen/map,
+                                                      :keys {:code {:type zen/string,
+                                                                    :zen.fhir/type "string"},
+                                                             :display {:type zen/string,
+                                                                       :zen.fhir/type "string"}}}},
+                                   :rxn_quantity {:type zen/string,
+                                                  :zen.fhir/type "string"},
+                                   :part_of {:type zen/vector,
+                                             :every {:type zen/map,
+                                                     :keys {:code {:type zen/string,
+                                                                   :zen.fhir/type "string"},
+                                                            :display {:type zen/string,
+                                                                      :zen.fhir/type "string"}}}},
+                                   :rxn_boss_strength_denom_unit {:type zen/string,
+                                                                  :zen.fhir/type "string"},
+                                   :rxn_ai {:type zen/vector,
+                                            :every {:type zen/string,
+                                                    :zen.fhir/type "string"}},
+                                   :rxn_boss_strength_num_value {:type zen/string,
+                                                                 :zen.fhir/type "string"},
+                                   :ingredients_of {:type zen/vector,
+                                                    :every {:type zen/map,
+                                                            :keys {:code {:type zen/string,
+                                                                          :zen.fhir/type "string"},
+                                                                   :display {:type zen/string,
+                                                                             :zen.fhir/type "string"}}}},
+                                   :has_part {:type zen/vector,
+                                              :every {:type zen/map,
+                                                      :keys {:code {:type zen/string,
+                                                                    :zen.fhir/type "string"},
+                                                             :display {:type zen/string,
+                                                                       :zen.fhir/type "string"}}}},
+                                   :contains {:type zen/vector,
+                                              :every {:type zen/map,
+                                                      :keys {:code {:type zen/string,
+                                                                    :zen.fhir/type "string"},
+                                                             :display {:type zen/string,
+                                                                       :zen.fhir/type "string"}}}},
+                                   :precise_ingredient_of {:type zen/vector,
+                                                           :every {:type zen/map,
+                                                                   :keys {:code {:type zen/string,
+                                                                                 :zen.fhir/type "string"},
+                                                                          :display {:type zen/string,
+                                                                                    :zen.fhir/type "string"}}}},
+                                   :has_tradename {:type zen/vector,
+                                                   :every {:type zen/map,
+                                                           :keys {:code {:type zen/string,
+                                                                         :zen.fhir/type "string"},
+                                                                  :display {:type zen/string,
+                                                                            :zen.fhir/type "string"}}}},
+                                   :isa {:type zen/vector,
+                                         :every {:type zen/map,
+                                                 :keys {:code {:type zen/string,
+                                                               :zen.fhir/type "string"},
+                                                        :display {:type zen/string,
+                                                                  :zen.fhir/type "string"}}}},
+                                   :reformulated_to {:type zen/vector,
+                                                     :every {:type zen/map,
+                                                             :keys {:code {:type zen/string,
+                                                                           :zen.fhir/type "string"},
+                                                                    :display {:type zen/string,
+                                                                              :zen.fhir/type "string"}}}},
+                                   :reformulation_of {:type zen/vector,
+                                                      :every {:type zen/map,
+                                                              :keys {:code {:type zen/string,
+                                                                            :zen.fhir/type "string"},
+                                                                     :display {:type zen/string,
+                                                                               :zen.fhir/type "string"}}}},
+                                   :rxn_boss_from {:type zen/vector,
+                                                   :every {:type zen/string,
+                                                           :zen.fhir/type "string"}},
+                                   :rxn_am {:type zen/vector,
+                                            :every {:type zen/string,
+                                                    :zen.fhir/type "string"}},
+                                   :quantified_form_of {:type zen/vector,
+                                                        :every {:type zen/map,
+                                                                :keys {:code {:type zen/string,
+                                                                              :zen.fhir/type "string"},
+                                                                       :display {:type zen/string,
+                                                                                 :zen.fhir/type "string"}}}},
+                                   :contained_in {:type zen/vector,
+                                                  :every {:type zen/map,
+                                                          :keys {:code {:type zen/string,
+                                                                        :zen.fhir/type "string"},
+                                                                 :display {:type zen/string,
+                                                                           :zen.fhir/type "string"}}}},
+                                   :form_of {:type zen/vector,
+                                             :every {:type zen/map,
+                                                     :keys {:code {:type zen/string,
+                                                                   :zen.fhir/type "string"},
+                                                            :display {:type zen/string,
+                                                                      :zen.fhir/type "string"}}}},
+                                   :rxn_boss_strength_num_unit {:type zen/string,
+                                                                :zen.fhir/type "string"},
+                                   :has_precise_ingredient {:type zen/vector,
+                                                            :every {:type zen/map,
+                                                                    :keys {:code {:type zen/string,
+                                                                                  :zen.fhir/type "string"},
+                                                                           :display {:type zen/string,
+                                                                                     :zen.fhir/type "string"}}}},
+                                   :boss_of {:type zen/vector,
+                                             :every {:type zen/map,
+                                                     :keys {:code {:type zen/string,
+                                                                   :zen.fhir/type "string"},
+                                                            :display {:type zen/string,
+                                                                      :zen.fhir/type "string"}}}},
+                                   :rxn_available_strength {:type zen/vector,
+                                                            :every {:type zen/string,
+                                                                    :zen.fhir/type "string"}},
+                                   :includes {:type zen/vector,
+                                              :every {:type zen/map,
+                                                      :keys {:code {:type zen/string,
+                                                                    :zen.fhir/type "string"},
+                                                             :display {:type zen/string,
+                                                                       :zen.fhir/type "string"}}}},
+                                   :rxterm_form {:type zen/string,
+                                                 :zen.fhir/type "string"},
+                                   :has_ingredient {:type zen/vector,
+                                                    :every {:type zen/map,
+                                                            :keys {:code {:type zen/string,
+                                                                          :zen.fhir/type "string"},
+                                                                   :display {:type zen/string,
+                                                                             :zen.fhir/type "string"}}}},
+                                   :orig_source {:type zen/vector,
+                                                 :every {:type zen/string,
+                                                         :zen.fhir/type "string"}},
+                                   :rxn_bn_cardinality {:type zen/string,
+                                                        :zen.fhir/type "string"},
+                                   :inverse_isa {:type zen/vector,
+                                                 :every {:type zen/map,
+                                                         :keys {:code {:type zen/string,
+                                                                       :zen.fhir/type "string"},
+                                                                :display {:type zen/string,
+                                                                          :zen.fhir/type "string"}}}},
+                                   :dose_form_of {:type zen/vector,
+                                                  :every {:type zen/map,
+                                                          :keys {:code {:type zen/string,
+                                                                        :zen.fhir/type "string"},
+                                                                 :display {:type zen/string,
+                                                                           :zen.fhir/type "string"}}}},
+                                   :rxn_strength {:type zen/string,
+                                                  :zen.fhir/type "string"},
+                                   :has_ingredients {:type zen/vector,
+                                                     :every {:type zen/map,
+                                                             :keys {:code {:type zen/string,
+                                                                           :zen.fhir/type "string"},
+                                                                    :display {:type zen/string,
+                                                                              :zen.fhir/type "string"}}}},
+                                   :consists_of {:type zen/vector,
+                                                 :every {:type zen/map,
+                                                         :keys {:code {:type zen/string,
+                                                                       :zen.fhir/type "string"},
+                                                                :display {:type zen/string,
+                                                                          :zen.fhir/type "string"}}}},
+                                   :has_dose_form {:type zen/vector,
+                                                   :every {:type zen/map,
+                                                           :keys {:code {:type zen/string,
+                                                                         :zen.fhir/type "string"},
+                                                                  :display {:type zen/string,
+                                                                            :zen.fhir/type "string"}}}},
+                                   :rxn_obsoleted {:type zen/vector,
+                                                   :every {:type zen/string,
+                                                           :zen.fhir/type "string"}},
+                                   :rxn_vet_drug {:type zen/string,
+                                                  :zen.fhir/type "string"},
+                                   :ingredient_of {:type zen/vector,
+                                                   :every {:type zen/map,
+                                                           :keys {:code {:type zen/string,
+                                                                         :zen.fhir/type "string"},
+                                                                  :display {:type zen/string,
+                                                                            :zen.fhir/type "string"}}}},
+                                   :has_quantified_form {:type zen/vector,
+                                                         :every {:type zen/map,
+                                                                 :keys {:code {:type zen/string,
+                                                                               :zen.fhir/type "string"},
+                                                                        :display {:type zen/string,
+                                                                                  :zen.fhir/type "string"}}}},
+                                   :constitutes {:type zen/vector,
+                                                 :every {:type zen/map,
+                                                         :keys {:code {:type zen/string,
+                                                                       :zen.fhir/type "string"},
+                                                                :display {:type zen/string,
+                                                                          :zen.fhir/type "string"}}}},
+                                   :has_form {:type zen/vector,
+                                              :every {:type zen/map,
+                                                      :keys {:code {:type zen/string,
+                                                                    :zen.fhir/type "string"},
+                                                             :display {:type zen/string,
+                                                                       :zen.fhir/type "string"}}}},
+                                   :orig_code {:type zen/vector,
+                                               :every {:type zen/string,
+                                                       :zen.fhir/type "string"}},
+                                   :rxn_boss_strength_denom_value {:type zen/string,
+                                                                   :zen.fhir/type "string"},
+                                   :doseformgroup_of {:type zen/vector,
+                                                      :every {:type zen/map,
+                                                              :keys {:code {:type zen/string,
+                                                                            :zen.fhir/type "string"},
+                                                                     :display {:type zen/string,
+                                                                               :zen.fhir/type "string"}}}},
+                                   :rxn_human_drug {:type zen/string,
+                                                    :zen.fhir/type "string"},
+                                   :ambiguity_flag {:type zen/vector,
+                                                    :every {:type zen/string,
+                                                            :zen.fhir/type "string"}},
+                                   :tradename_of {:type zen/vector,
+                                                  :every {:type zen/map,
+                                                          :keys {:code {:type zen/string,
+                                                                        :zen.fhir/type "string"},
+                                                                 :display {:type zen/string,
+                                                                           :zen.fhir/type "string"}}}},
+                                   :included_in {:type zen/vector,
+                                                 :every {:type zen/map,
+                                                         :keys {:code {:type zen/string,
+                                                                       :zen.fhir/type "string"},
+                                                                :display {:type zen/string,
+                                                                          :zen.fhir/type "string"}}}},
+                                   :rxn_in_expressed_flag {:type zen/string,
+                                                           :zen.fhir/type "string"},
+                                   :has_doseformgroup {:type zen/vector,
+                                                       :every {:type zen/map,
+                                                               :keys {:code {:type zen/string,
+                                                                             :zen.fhir/type "string"},
+                                                                      :display {:type zen/string,
+                                                                                :zen.fhir/type "string"}}}},
+                                   :rxn_activated {:type zen/vector,
+                                                   :every {:type zen/string,
+                                                           :zen.fhir/type "string"}}},
+                            :validation-type :open},
+                 :valueset {:type zen/vector,
+                            :every {:type zen/string, :zen.fhir/type "string"}},
+                 :resourceType {:const {:value "Concept"}},
+                 :ancestors {:type zen/map, :validation-type :open},
+                 :deprecated {:type zen/boolean, :zen.fhir/type "boolean"},
+                 :code {:type zen/string, :zen.fhir/type "string"},
+                 :display {:type zen/string, :zen.fhir/type "string"},
+                 :hierarchy {:type zen/map, :validation-type :open}},
+          :zen.fhir/type "Concept",
+          :validation-type :open},
+ constitutes-code {:expression [["property" "constitutes" "code"]],
+                   :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                   :name "constitutesCode",
+                   :type :token,
+                   :resource {:resourceType "Entity", :id "Concept"}},
+ rxterm-form-index {:zen/tags #{aidbox.index.v1/auto-index}, :for rxterm-form},
+ form-of-code-index {:zen/tags #{aidbox.index.v1/auto-index}, :for form-of-code},
+ isa-display {:expression [["property" "isa" "display"]],
+              :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+              :name "isaDisplay",
+              :type :string,
+              :resource {:resourceType "Entity", :id "Concept"}},
+ reformulation-of-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                              :for reformulation-of-code},
+ rxn-human-drug {:expression [["property" "rxn_human_drug"]],
+                 :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                 :name "rxnHumanDrug",
+                 :type :string,
+                 :resource {:resourceType "Entity", :id "Concept"}},
+ has-tradename-code {:expression [["property" "has_tradename" "code"]],
+                     :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                     :name "hasTradenameCode",
+                     :type :token,
+                     :resource {:resourceType "Entity", :id "Concept"}},
+ contains-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                      :for contains-code},
+ reformulated-to-display {:expression [["property" "reformulated_to" "display"]],
+                          :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                          :name "reformulatedToDisplay",
+                          :type :string,
+                          :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-boss-strength-num-value {:expression [["property"
+                                            "rxn_boss_strength_num_value"]],
+                              :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                              :name "rxnBossStrengthNumValue",
+                              :type :string,
+                              :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-vet-drug {:expression [["property" "rxn_vet_drug"]],
+               :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+               :name "rxnVetDrug",
+               :type :string,
+               :resource {:resourceType "Entity", :id "Concept"}},
+ contains-code {:expression [["property" "contains" "code"]],
+                :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                :name "containsCode",
+                :type :token,
+                :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-available-strength {:expression [["property" "rxn_available_strength"]],
+                         :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                         :name "rxnAvailableStrength",
+                         :type :string,
+                         :resource {:resourceType "Entity", :id "Concept"}},
+ tradename-of-display {:expression [["property" "tradename_of" "display"]],
+                       :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                       :name "tradenameOfDisplay",
+                       :type :string,
+                       :resource {:resourceType "Entity", :id "Concept"}},
+ has-ingredients-display {:expression [["property" "has_ingredients" "display"]],
+                          :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                          :name "hasIngredientsDisplay",
+                          :type :string,
+                          :resource {:resourceType "Entity", :id "Concept"}},
+ ingredient-of-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                           :for ingredient-of-code},
+ ingredients-of-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                            :for ingredients-of-code},
+ consists-of-code {:expression [["property" "consists_of" "code"]],
+                   :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                   :name "consistsOfCode",
+                   :type :token,
+                   :resource {:resourceType "Entity", :id "Concept"}},
+ part-of-code {:expression [["property" "part_of" "code"]],
+               :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+               :name "partOfCode",
+               :type :token,
+               :resource {:resourceType "Entity", :id "Concept"}},
+ rxn-ai-index {:zen/tags #{aidbox.index.v1/auto-index}, :for rxn-ai},
+ has-doseformgroup-display {:expression [["property"
+                                          "has_doseformgroup"
+                                          "display"]],
+                            :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                            :name "hasDoseformgroupDisplay",
+                            :type :string,
+                            :resource {:resourceType "Entity", :id "Concept"}},
+ includes-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                      :for includes-code},
+ includes-code {:expression [["property" "includes" "code"]],
+                :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                :name "includesCode",
+                :type :token,
+                :resource {:resourceType "Entity", :id "Concept"}},
+ has-doseformgroup-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                  :for has-doseformgroup-display},
+ boss-of-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                        :for boss-of-display},
+ reformulation-of-code {:expression [["property" "reformulation_of" "code"]],
+                        :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                        :name "reformulationOfCode",
+                        :type :token,
+                        :resource {:resourceType "Entity", :id "Concept"}},
+ reformulated-to-code {:expression [["property" "reformulated_to" "code"]],
+                       :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                       :name "reformulatedToCode",
+                       :type :token,
+                       :resource {:resourceType "Entity", :id "Concept"}},
+ reformulated-to-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                :for reformulated-to-display},
+ rxn-boss-strength-denom-unit-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                     :for rxn-boss-strength-denom-unit},
+ consists-of-display {:expression [["property" "consists_of" "display"]],
+                      :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                      :name "consistsOfDisplay",
+                      :type :string,
+                      :resource {:resourceType "Entity", :id "Concept"}},
+ precise-ingredient-of-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                   :for precise-ingredient-of-code},
+ doseformgroup-of-display {:expression [["property"
+                                         "doseformgroup_of"
+                                         "display"]],
+                           :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                           :name "doseformgroupOfDisplay",
+                           :type :string,
+                           :resource {:resourceType "Entity", :id "Concept"}},
+ constitutes-display {:expression [["property" "constitutes" "display"]],
+                      :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                      :name "constitutesDisplay",
+                      :type :string,
+                      :resource {:resourceType "Entity", :id "Concept"}},
+ doseformgroup-of-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                 :for doseformgroup-of-display},
+ precise-ingredient-of-code {:expression [["property"
+                                           "precise_ingredient_of"
+                                           "code"]],
+                             :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                             :name "preciseIngredientOfCode",
+                             :type :token,
+                             :resource {:resourceType "Entity", :id "Concept"}},
+ form-of-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                        :for form-of-display},
+ boss-of-code-index {:zen/tags #{aidbox.index.v1/auto-index}, :for boss-of-code},
+ precise-ingredient-of-display {:expression [["property"
+                                              "precise_ingredient_of"
+                                              "display"]],
+                                :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                                :name "preciseIngredientOfDisplay",
+                                :type :string,
+                                :resource {:resourceType "Entity",
+                                           :id "Concept"}},
+ has-tradename-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                              :for has-tradename-display},
+ form-of-display {:expression [["property" "form_of" "display"]],
+                  :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                  :name "formOfDisplay",
+                  :type :string,
+                  :resource {:resourceType "Entity", :id "Concept"}},
+ ingredients-of-code {:expression [["property" "ingredients_of" "code"]],
+                      :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                      :name "ingredientsOfCode",
+                      :type :token,
+                      :resource {:resourceType "Entity", :id "Concept"}},
+ orig-source {:expression [["property" "orig_source"]],
+              :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+              :name "origSource",
+              :type :string,
+              :resource {:resourceType "Entity", :id "Concept"}},
+ has-part-display {:expression [["property" "has_part" "display"]],
+                   :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                   :name "hasPartDisplay",
+                   :type :string,
+                   :resource {:resourceType "Entity", :id "Concept"}},
+ reformulation-of-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                 :for reformulation-of-display},
+ has-quantified-form-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                    :for has-quantified-form-display},
+ rxn-obsoleted-index {:zen/tags #{aidbox.index.v1/auto-index},
+                      :for rxn-obsoleted},
+ has-ingredients-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                :for has-ingredients-display},
+ isa-code {:expression [["property" "isa" "code"]],
+           :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+           :name "isaCode",
+           :type :token,
+           :resource {:resourceType "Entity", :id "Concept"}},
+ isa-code-index {:zen/tags #{aidbox.index.v1/auto-index}, :for isa-code},
+ consists-of-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                         :for consists-of-code},
+ contained-in-code {:expression [["property" "contained_in" "code"]],
+                    :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                    :name "containedInCode",
+                    :type :token,
+                    :resource {:resourceType "Entity", :id "Concept"}},
+ orig-code {:expression [["property" "orig_code"]],
+            :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+            :name "origCode",
+            :type :string,
+            :resource {:resourceType "Entity", :id "Concept"}},
+ has-boss-display {:expression [["property" "has_boss" "display"]],
+                   :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+                   :name "hasBossDisplay",
+                   :type :string,
+                   :resource {:resourceType "Entity", :id "Concept"}},
+ tty
+ {:expression [["property" "tty"]],
+  :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+  :name "tty",
+  :type :token,
+  :resource {:resourceType "Entity", :id "Concept"}}
+
+ tty-index
+ {:zen/tags #{aidbox.index.v1/auto-index},
+  :for tty}
+
+ contains-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                         :for contains-display},
+ precise-ingredient-of-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                      :for precise-ingredient-of-display},
+ contained-in-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                             :for contained-in-display},
+ consists-of-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                            :for consists-of-display},
+ contained-in-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                          :for contained-in-code},
+ part-of-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                        :for part-of-display},
+ ingredients-of-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                               :for ingredients-of-display},
+ rxn-strength {:expression [["property" "rxn_strength"]],
+               :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+               :name "rxnStrength",
+               :type :string,
+               :resource {:resourceType "Entity", :id "Concept"}},
+ has-part-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                      :for has-part-code},
+ has-form-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                         :for has-form-display},
+ has-dose-form-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                              :for has-dose-form-display},
+ rxn-am-index {:zen/tags #{aidbox.index.v1/auto-index}, :for rxn-am},
+
+ included-in-display-index {:zen/tags #{aidbox.index.v1/auto-index},
+                            :for included-in-display},
+ quantified-form-of-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                :for quantified-form-of-code},
+ has-precise-ingredient-code-index {:zen/tags #{aidbox.index.v1/auto-index},
+                                    :for has-precise-ingredient-code},
+ orig-code-index {:zen/tags #{aidbox.index.v1/auto-index}, :for orig-code}
+
  repositories
  {:zen/tags #{aidbox/service}
   :engine aidbox.repository.v1/engine
   :load-default true
-  :repositories #{practitioner-repository}}
+  :repositories #{practitioner-repository concept-repository}}
  }
