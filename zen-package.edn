@@ -1,1 +1,1 @@
-{:deps {}}
+{:deps {rxnorm "https://github.com/zen-fhir/rxnorm.git"}}

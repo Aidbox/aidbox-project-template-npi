@@ -53,9 +53,19 @@
  {:zen/tags #{aidbox.config/metrics}
   :port #env BOX_METRICS_PORT}
 
+ features
+ {:zen/tags #{aidbox.config/features}
+  :ftr {:pull
+        {:enable true
+         :sync   false}
+        :build-index-on-startup
+        {:enable false
+         :sync   false}}}
+
  base-config
  {:zen/tags                #{aidbox.config/config}
   :web                     web-config
+  :features                features
   :db                      db-config
   :search                  search-config
   :compatibility           compatibility-config
