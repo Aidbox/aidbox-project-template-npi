@@ -1143,7 +1143,7 @@
  {:expression [["display"]],
   :zen/tags #{aidbox.search-parameter.v1/search-parameter},
   :name "display",
-  :type :token,
+  :type :string,
   :resource {:resourceType "Entity", :id "Concept"}}
 
  display-index
@@ -1154,7 +1154,7 @@
  {:expression [["system"]],
   :zen/tags #{aidbox.search-parameter.v1/search-parameter},
   :name "display",
-  :type :token,
+  :type :string,
   :resource {:resourceType "Entity", :id "Concept"}}
 
  system-index
