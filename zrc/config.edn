@@ -443,7 +443,8 @@
                 :resource {:resourceType "Entity", :id "Concept"}},
  concept-repository {:extra-parameter-sources :all,
                      :zen/tags #{aidbox.repository.v1/repository},
-                     :search-parameters #{display
+                     :search-parameters #{system
+                                          display
                                           tty
                                           inverse-isa-code
                                           has-dose-form-code
@@ -528,7 +529,8 @@
                                           rxn-strength},
                      :resourceType "Concept",
                      :base-profile Concept,
-                     :indexes #{display-index
+                     :indexes #{system-index
+                                display-index
                                 tty-index
                                 has-tradename-code-index
                                 tradename-of-code-index
@@ -1159,7 +1161,7 @@
 
  system-index
  {:zen/tags #{aidbox.index.v1/auto-index},
-  :for display}
+  :for system}
 
  contains-display-index {:zen/tags #{aidbox.index.v1/auto-index},
                          :for contains-display},
