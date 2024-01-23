@@ -1153,7 +1153,7 @@
  system
  {:expression [["system"]],
   :zen/tags #{aidbox.search-parameter.v1/search-parameter},
-  :name "display",
+  :name "system",
   :type :string,
   :resource {:resourceType "Entity", :id "Concept"}}
 
