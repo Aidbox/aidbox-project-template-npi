@@ -443,7 +443,8 @@
                 :resource {:resourceType "Entity", :id "Concept"}},
  concept-repository {:extra-parameter-sources :all,
                      :zen/tags #{aidbox.repository.v1/repository},
-                     :search-parameters #{suppressible-flag
+                     :search-parameters #{code
+                                          suppressible-flag
                                           system
                                           display
                                           tty
@@ -530,7 +531,8 @@
                                           rxn-strength},
                      :resourceType "Concept",
                      :base-profile Concept,
-                     :indexes #{suppressible-flag-index
+                     :indexes #{code-index
+                                suppressible-flag-index
                                 system-index
                                 display-index
                                 tty-index
@@ -1144,6 +1146,17 @@
  tty-index
  {:zen/tags #{aidbox.index.v1/auto-index},
   :for tty}
+
+ code
+ {:expression [["code"]],
+  :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+  :name "code",
+  :type :token,
+  :resource {:resourceType "Entity", :id "Concept"}}
+
+ code-index
+ {:zen/tags #{aidbox.index.v1/auto-index},
+  :for code}
 
  display
  {:expression [["display"]],
