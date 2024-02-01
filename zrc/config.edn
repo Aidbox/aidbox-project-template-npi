@@ -687,7 +687,9 @@
           :keys {:definition {:type zen/string, :zen.fhir/type "string"},
                  :system {:type zen/string, :zen.fhir/type "string"},
                  :property {:type zen/map,
-                            :keys {:tty {:type zen/string,
+                            :keys {:suppressible-flag {:type zen/string,
+                                                       :zen.fhir/type "string"}
+                                   :tty {:type zen/string,
                                          :zen.fhir/type "string"}
                                    :rxn_qualitative_distinction {:type zen/string,
                                                                  :zen.fhir/type "string"},
