@@ -443,7 +443,8 @@
                 :resource {:resourceType "Entity", :id "Concept"}},
  concept-repository {:extra-parameter-sources :all,
                      :zen/tags #{aidbox.repository.v1/repository},
-                     :search-parameters #{system
+                     :search-parameters #{suppressible-flag
+                                          system
                                           display
                                           tty
                                           inverse-isa-code
@@ -529,7 +530,8 @@
                                           rxn-strength},
                      :resourceType "Concept",
                      :base-profile Concept,
-                     :indexes #{system-index
+                     :indexes #{suppressible-flag-index
+                                system-index
                                 display-index
                                 tty-index
                                 has-tradename-code-index
@@ -1162,6 +1164,18 @@
  system-index
  {:zen/tags #{aidbox.index.v1/auto-index},
   :for system}
+
+ suppressible-flag
+ {:expression [["property" "suppressible-flag"]],
+  :zen/tags #{aidbox.search-parameter.v1/search-parameter},
+  :name "suppressibleFlag",
+  :type :token,
+  :resource {:resourceType "Entity", :id "Concept"}}
+
+ suppressible-flag-index
+ {:zen/tags #{aidbox.index.v1/auto-index},
+  :for suppressible-flag}
+
 
  contains-display-index {:zen/tags #{aidbox.index.v1/auto-index},
                          :for contains-display},
