@@ -1,7 +1,6 @@
 {ns main
  import #{aidbox
-          config
-          rxnorm}
+          config}
  
  box
  {:zen/tags #{aidbox/system}
